@@ -1,8 +1,9 @@
 const dotenv = require('dotenv');
 const path = require('path');
+const configVar = 3;
 
 dotenv.config({
-  path: path.resolve(__dirname, process.env.NODE_ENV + '.env')
+  path: path.resolve(__dirname, process.argv[configVar] + '.env')
 });
 module.exports = {
   NODE_ENV: process.env.NODE_ENV,
